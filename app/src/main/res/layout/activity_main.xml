@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- EditText untuk input Nama (wajib) -->
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama"
+            android:inputType="textPersonName" />
+
+        <!-- EditText untuk input Aduan (wajib) -->
+        <EditText
+            android:id="@+id/etAduan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Aduan"
+            android:inputType="text" />
+
+        <!-- EditText untuk input Lokasi Alamat (wajib) -->
+        <EditText
+            android:id="@+id/etLokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lokasi Alamat"
+            android:inputType="textPostalAddress" />
+
+        <!-- EditText untuk input Keterangan (wajib) -->
+        <EditText
+            android:id="@+id/etKeterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keterangan"
+            android:inputType="textMultiLine" />
+
+        <!-- Tombol untuk upload foto bukti -->
+        <Button
+            android:id="@+id/btnUploadFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Foto"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <!-- ImageView untuk preview foto bukti -->
+        <ImageView
+            android:id="@+id/ivBukti"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Tombol untuk mengirim laporan -->
+        <Button
+            android:id="@+id/btnLapor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lapor"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <!-- RecyclerView untuk menampilkan daftar laporan -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLaporan"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
